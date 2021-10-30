@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/SistemaBarMoes/src/java/config/Conexion.java</file>
-            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/SistemaBarMoes/web/index.jsp</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/src/java/Modelo/PersonaDAO.java</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/web/vistas/adminview.jsp</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/web/index.jsp</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/src/java/Controlador/Validar.java</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/web/vistas/cajeroview.jsp</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/web/vistas/meseroview.jsp</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/src/java/Modelo/Persona.java</file>
+            <file>file:/C:/Users/fabfl/Documents/misArchivos/Documentos/UNIMINUTO/SEMESTRE%206/DISEÑO%20DE%20ALGORITMOS/bar/SistemaBarMoes/src/java/Controlador/Controlador.java</file>
         </group>
     </open-files>
 </project-private>
