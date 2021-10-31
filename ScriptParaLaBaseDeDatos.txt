@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `sistemabar_moes`.`personal` (
   `apellidos` VARCHAR(45) NOT NULL,
   `numeroCelular` VARCHAR(15) NULL DEFAULT NULL,
   `nombreUsuario` VARCHAR(45) NULL DEFAULT NULL,
-  `contraseña` VARCHAR(200) NOT NULL,
+  `contrasena` VARCHAR(200) NOT NULL,
   `idEstado` TINYINT(1) NULL DEFAULT NULL,
   `idSucursal` SMALLINT(2) NULL DEFAULT NULL,
   `idPerfil` TINYINT(1) NULL DEFAULT NULL,
