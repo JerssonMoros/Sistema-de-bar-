@@ -65,7 +65,7 @@
                                                 <div class="card-body">
                                                     <h5 class="card-title">Procesar venta</h5>
                                                     <p class="card-text">Procesar o finalizar venta</p>
-                                                    <form action="Controlador" method="POST">
+                                                    <form action="Controlador?perfil=admin" method="POST">
                                                         <button class="btn btn-primary" type="submit" name="accion" value="procesarPedido">
                                                             Procesar Ventas
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">

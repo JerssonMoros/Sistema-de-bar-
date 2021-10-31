@@ -51,11 +51,37 @@
                 </div>
                 
         </nav>
-        <div class="m-4" style="height:550px;">
-            <iframe style="height:100%;width: 100%;" name="myFrame"></iframe>
-        </div>               
+    <div class="container p-4">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Opciones de Mesero
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex flex-wrap justify-content-around">
+                            <div class="card mb-2" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Control de Pedidos</h5>
+                                    <p class="card-text">Tomar pedidos, editar pedidos, consultar pedidos</p>
+                                    <form action="Controlador" method="POST">
+                                        <button class="btn btn-primary" type="submit" name="accion" value="procesarVenta">
+                                            Gestion de pedidos
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+                                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+        </div>
+    </div> 
                        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         
     </body>
 </html>
