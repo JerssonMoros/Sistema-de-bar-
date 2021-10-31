@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author fabfl
  */
-public class Controlador extends HttpServlet {
+public class ControladorAdmin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,26 +29,19 @@ public class Controlador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String perfil = request.getParameter("perfil");
-        String accion = request.getParameter("accion");
-        System.out.println("Perfil ="+perfil);
-        System.out.println("Accion ="+accion);
-        if(perfil.equals("admin")){
-            if(accion.equals("")){
-                
-            }
-            
-            request.getRequestDispatcher("vistas/adminview.jsp").forward(request, response);
-        
-        
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ControladorAdmin</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ControladorAdmin at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-        if(perfil.equals("cajero")){
-            request.getRequestDispatcher("vistas/cajeroview.jsp").forward(request, response);
-        }
-        if(perfil.equals("mesero")){
-            request.getRequestDispatcher("vistas/meseroview.jsp").forward(request, response);
-        }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
