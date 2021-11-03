@@ -91,15 +91,16 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>DNI</th>
-                                <th>NOMBRES</th>
+                                <th>NOMBRE</th>
                                 <th>DIRECCION</th>
+                                <th>TELEFONO</th>
+                                <th>CORREO</th>
                                 <th>ESTADO</th>
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="cl" items="${clientes}">
+                            <c:forEach var="dis" items="${distribuidores}">
                                 <tr>
                                     <td>${cl.getId()}</td>
                                     <td>${cl.getDni()}</td>
