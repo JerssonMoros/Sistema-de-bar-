@@ -7,6 +7,7 @@ package Controlador;
 
 import Modelo.Persona;
 import Modelo.PersonaDAO;
+import config.MDfive;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -40,21 +41,20 @@ public class Validar extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }
         if(accion.equals("Ingresar")){
-            System.out.println("INICIA EL LOGEO");
             String user = request.getParameter("txtuser");
             String pass = request.getParameter("txtpass");
-            System.out.println("User "+user );
-            persona = personadao.validar(user, pass);
+            String passEncripted = MDfive.getMD5(pass);
+            persona = personadao.validar(user, passEncripted);
             System.out.println(persona.getApellidos());
             if(persona.getUserName() !=null && persona.getIdPerfil() == 1){
                 request.setAttribute("usuario", persona);
-                request.getRequestDispatcher("Controlador?perfil=admin").forward(request, response);
+                request.getRequestDispatcher("Controlador?perfil=admin&accion=inicio&sucursal=0").forward(request, response);
             }else if(persona.getUserName() !=null && persona.getIdPerfil() == 2){
                 request.setAttribute("usuario", persona);
-                request.getRequestDispatcher("Controlador?perfil=cajero").forward(request, response);
+                request.getRequestDispatcher("Controlador?perfil=cajero&accion=inicio").forward(request, response);
             }else if(persona.getUserName() !=null && persona.getIdPerfil() == 3){
                 request.setAttribute("usuario", persona);
-                request.getRequestDispatcher("Controlador?perfil=mesero").forward(request, response);
+                request.getRequestDispatcher("Controlador?perfil=mesero&accion=inicio&sucursal="+persona.getIdSucursal()).forward(request, response);
             }else if(persona.getUserName() == null){
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }

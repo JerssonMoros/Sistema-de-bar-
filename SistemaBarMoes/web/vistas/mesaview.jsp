@@ -1,10 +1,9 @@
 <%-- 
-    Document   : meseroview
-    Created on : 29-oct-2021, 23:00:26
+    Document   : mesaview
+    Created on : 03-nov-2021, 18:50:48
     Author     : fabfl
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -55,9 +54,11 @@
     <div class="container p-2 d-flex flex-wrap">
         <div class="input-group m-3 ">
             <span class="input-group-text" id="inputGroup-sizing-default">Sucursal</span>
-            <input type="text" class="form-control col-sm-6" value="${usuario.getIdSucursal()}">
+            <input type="text" class="form-control " value="${sucursal.getId()}">
+            <span class="input-group-text" id="inputGroup-sizing-default">Mesa</span>
+            <input type="text" class="form-control " value="${mesa.getNum()}">
             <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
-            <input type="text" class="form-control  col-sm-6" value="${sucursal.getNombre()}">
+            <input type="text" class="form-control " value="${sucursal.getNombre()}">
         </div>  
         <div class="container col-sm-6 border border-3">
             <h3>Mesas</h3>
@@ -75,7 +76,7 @@
                                 <td>${mesa.getNum()}</td>
                                 <td>${mesa.getEstadoLetra()}</td>
                                 <td>
-                                    <a class="btn btn-secondary" href="Controlador?perfil=mesero&accion=irmesa&id=${mesa.getId()}&sucursal=${sucursal.getId()}&mesero=${usuario.getId()}">
+                                    <a class="btn btn-secondary" href="Controlador?perfil=mesero&accion=irmesa&id=${mesa.getId()}&sucursal=${sucursal.getId()}">
                                         Ir
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>

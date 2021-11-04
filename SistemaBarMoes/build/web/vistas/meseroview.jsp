@@ -4,6 +4,7 @@
     Author     : fabfl
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,35 +50,47 @@
                        </form>
                     </ul>
                 </div>
-                
         </nav>
-    <div class="container p-4">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Opciones de Mesero
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body d-flex flex-wrap justify-content-around">
-                            <div class="card mb-2" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Control de Pedidos</h5>
-                                    <p class="card-text">Tomar pedidos, editar pedidos, consultar pedidos</p>
-                                    <form action="Controlador" method="POST">
-                                        <button class="btn btn-primary" type="submit" name="accion" value="procesarVenta">
-                                            Gestion de pedidos
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-                                            </svg>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
+                        
+    <div class="container p-2 d-flex flex-wrap">
+        <div class="input-group m-3 ">
+            <span class="input-group-text" id="inputGroup-sizing-default">Sucursal</span>
+            <input type="text" class="form-control col-sm-6" value="${usuario.getIdSucursal()}">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+            <input type="text" class="form-control  col-sm-6" value="${sucursal.getNombre()}">
+        </div>  
+        <div class="container col-sm-6 border border-3">
+            <h3>Mesas</h3>
+            <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>NUM</th>
+                            <th>ESTADO</th>
+                            <th>ACCION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="mesa" items="${mesas}">
+                            <tr>
+                                <td>${mesa.getNum()}</td>
+                                <td>${mesa.getEstadoLetra()}</td>
+                                <td>
+                                    <a class="btn btn-secondary" href="Controlador?perfil=mesero&accion=irmesa&id=${mesa.getId()}&sucursal=${sucursal.getId()}&mesero=${usuario.getId()}">
+                                        Ir
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                        
+                    </tbody>
+                </table>
+                
+        </div>
+        <div class="container col-sm-6 border border-3">
+            Holaaa
         </div>
     </div> 
                        

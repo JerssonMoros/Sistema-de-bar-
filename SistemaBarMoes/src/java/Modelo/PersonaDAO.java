@@ -47,31 +47,30 @@ public class PersonaDAO {
         }
         return per;
     }
-    
-    /*
-    // Para validar el login
-    public Empleado validar(String user, String dni){
-        Empleado em = new Empleado();
-        String sql = "select * from empleado where User=? and Dni=?";
-        try{
+    public Persona buscar(int id){
+        Persona per = new Persona();
+        String sql = "select * from personal where idPersonal="+id;
+        try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
-            ps.setString(1, user);
-            ps.setString(2, dni);
             rs = ps.executeQuery();
             while(rs.next()){
-                em.setId(rs.getInt("IdEmpleado"));
-                em.setUser(rs.getString("User"));
-                em.setDni(rs.getString("Dni"));
-                //System.out.println("Nombreeeee "+rs.getString("Nombres"));
-                em.setNombre(rs.getString("Nombres"));
-                em.setEstado(rs.getString("Estado"));
+                per.setId(rs.getInt("idPersonal"));
+                per.setDni(rs.getString("numeroIdentificacion"));
+                per.setNombres(rs.getString("nombres"));
+                per.setApellidos(rs.getString("apellidos"));
+                per.setCelular(rs.getString("numeroCelular"));
+                per.setUserName(rs.getString("nombreUsuario"));
+                per.setContrasena(rs.getString("contrasena"));
+                per.setIdEstado(rs.getInt("idEstado"));
+                per.setIdSucursal(rs.getInt("idSucursal"));
+                per.setIdPerfil(rs.getInt("idPerfil"));
             }
-        } catch(Exception e){
-            System.out.println("Exception "+ e);
         }
-        return em;
+        catch(Exception e){
+            System.out.println("Exception Listar "+e);
+        }
+        return per;
     }
-    */
     
 }
